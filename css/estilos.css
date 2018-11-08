@@ -14,6 +14,22 @@ h1 {
     margin: 0;
     padding: 0;
 }
+p {
+    font-family: "Muli", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgba(10, 10, 10, 0.8);
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    font-family: "Multi", sans-serif;
+    color: rgba(10, 10, 10, 0.8);
+    margin: 0;
+    padding: 0;
+}
 /**** NAVBAR ****/
 .navbar {
     display: flex;
@@ -84,7 +100,11 @@ h1 {
     margin-left: -.75rem;
     margin-right: -.75rem;
     margin-top: -.75rem;
-    display: flex;
+}
+@media screen and (min-width: 769px) {
+    .columns:not(.is-desktop) {
+        display: flex;
+    }
 }
 .columns:last-child {
     margin-bottom: -.75rem;
@@ -190,16 +210,16 @@ h1.is-size-2-tablet.is-size-1-desktop {
 .section.is-long {
     padding-bottom: 14rem;
 }
-/*@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
     .section.is-long {
-        padding: 16rem;
+        padding-bottom: 16rem;
     }
 }
 @media screen and (min-width: 1280px) {
     .section.is-long {
-        padding: 18rem;
+        padding-bottom: 18rem;
     }
-}*/
+}
 .section.skills {
     margin-top: -14rem;
     padding-bottom: 1rem;
@@ -216,7 +236,7 @@ h1.is-size-2-tablet.is-size-1-desktop {
     padding: 0;
 }
 .container.is-narrow {
-    max-width: 1200px;
+    max-width: 1000px;
 }
 .section.skills .box .content .columns {
     margin-left: 0;
@@ -236,6 +256,88 @@ h1.is-size-2-tablet.is-size-1-desktop {
 }
 @media screen and (min-width: 1280px){
     .section.skills .box .content .columns .column {
-        padding: 70px 45px;
+        padding: 60px 45px;
     }
+}
+/***** SECCION TRES *****/
+img {
+    height: auto;
+    max-width: 100%;
+}
+.image {
+    display: block;
+    position: relative;
+}
+.content figure {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+}
+.section.skills .box .content .columns .column figure.image {
+    margin: 0 auto 2em;
+}
+.content figure img {
+    display: inline-block;
+}
+.section.skills .box .content .columns .column figure.image img.is-skill-icon {
+    height: 4rem;
+    width: auto;
+    color: #124dc4;
+}
+.content h1:not(:first-child) {
+    margin-top: 1em;
+}
+.title:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.content p{
+    font-size: 18px;
+}
+@media screen and (min-width: 1088px) {
+    .content p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+.section p {
+    margin-bottom: 2rem;
+}
+.content p:not(:last-child) {
+    margin-bottom: 2em;
+}
+@media screen and (min-width: 769px) {
+    .section.skills .box .content .columns .column p {
+        font-size: 18px;
+    }
+}
+.has-text-primary {
+    color: #293347;
+}
+.has-text-weight-normal {
+    font-weight: 700 !important;
+}
+.section.skills .box .content .columns .column p.list-title {
+    margin-top: 50px;
+    margin-bottom: 8px;
+}
+.content ul {
+    list-style: disc outside;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+.section.skills .box .content .columns .column ul {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+.content li+li {
+    margin-top: 0.25em;
+}
+@media screen and (min-width: 769px) {
+    .section.skills .box .content .columns .column ul li {
+        font-size: 18px;
+    }
+}
+.section p.tools {
+    margin-bottom: 0;
 }
